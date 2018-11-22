@@ -1,7 +1,7 @@
 <div class="mt-5">
-  <app-contacto (addOrEditEvent)="addOrEdit($event)" [selectedUser]="selectedUser"></app-contacto>
+  <app-contacto (addOrEditEvent)="addOrEdit($event)" (deleteEvent)="delete($event)" [selectedUser]="selectedUser"></app-contacto>
 </div>
 <div class="mt-5">
-  <app-table [userList]="userList" (openForEditEvent)="openForEdit($event)" [selectedUser]="selectedUser"></app-table>
+  <app-table [userList]="userList" (openForEditEvent)="openForEdit($event)"></app-table>
 </div>
 

@@ -10,13 +10,13 @@ import { User } from '../models/user';
 })
 export class TableComponent implements OnInit {
 
-  
+
   @Input() userList: User[];
   @Output() openForEditEvent: EventEmitter<User> = new EventEmitter();
-  @Input()
-  set selectedUser(user: User) {
-    this.user = Object.assign({}, user);
-  }
+  
+
+  selectedUser:User;
+
   user: User = new User();
 
   constructor() { }
@@ -26,5 +26,7 @@ export class TableComponent implements OnInit {
 
   openForEdit(user:User){
     this.openForEditEvent.emit(user);
+    this.selectedUser = user;
   }
+ 
 }

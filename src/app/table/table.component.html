@@ -11,7 +11,8 @@
     </thead>
     <tbody>
         
-      <tr *ngFor="let user of userList;let i = index" class="list-group-item-action" (click)="openForEdit(user)" [class.active]="selectedUser == user">
+      <tr *ngFor="let user of userList;let i = index" class="list-group-item-action" (click)="openForEdit(user)" [ngClass]="{'mi-active':user == selectedUser}">
+ >
         <th scope="row">{{user.id}}</th>
         <td>{{user.name}}</td>
         <td>{{user.lastname}}</td>

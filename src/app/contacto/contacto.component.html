@@ -27,11 +27,14 @@
       <input type="text" [(ngModel)]="user.movilephone" class="form-control" id="numberphone" name="numberphone" placeholder="Escriba su teléfono">
     </div>
 
-    <div>
+  
       <button (click)="addOrEdit()" class="btn btn-primary">
         Enviar
       </button>
-    </div>
+      <button *ngIf="user.id" class="btn btn-danger" (click)="delete()">
+        Delete
+      </button>
+    
 
   </form>
 

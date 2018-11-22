@@ -23,8 +23,10 @@ export class ContactoTableComponent implements OnInit {
 
   addOrEdit(user: User) {
     if (user.id == null) {
+
       // this.userList.push(this.selectedUser);
       // this.selectedUser = new User();
+
       //Inserta nuevo usuarios
       const id = this.userList.length + 1;
       this.userList.push(Object.assign({}, user, { id }));
@@ -42,6 +44,11 @@ export class ContactoTableComponent implements OnInit {
     //llena los inputs del formulario con los datos de la tabla 
     //para posteriormente ser editados
     this.selectedUser = user;
+  }
+
+  delete(user:User){
+    this.userList = this.userList.filter(x => x.id != user.id);
+    // this.selectedUser = new User();
   }
 
 }

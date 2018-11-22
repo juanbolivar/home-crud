@@ -10,13 +10,15 @@ import { User } from '../models/user';
 export class ContactoComponent implements OnInit {
 
   @Output() addOrEditEvent: EventEmitter<User> = new EventEmitter();
+  @Output() deleteEvent: EventEmitter<User> = new EventEmitter();
+
 
   user: User = new User();
 
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
   @Input()
@@ -29,6 +31,13 @@ export class ContactoComponent implements OnInit {
     this.user = new User();
   }
 
+  delete(){
+    this.deleteEvent.emit(this.user);
+  }
+
+  // delete() {
+  //   this.deleteEvent.emit(this.user);
+  // }
 }
 
 
