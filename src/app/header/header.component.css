@@ -1,0 +1,31 @@
+/*HEADER*/
+.header {
+    margin-top:1em;
+}
+
+.logo img {
+    width:250px;
+}
+/*START BAR*/
+
+.nav-item a {
+    color: #0011fe;
+    margin: 1em;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.nav-item a:hover{
+    font-weight: bold;
+    color: #0000ca;
+    cursor:pointer;
+    text-decoration:none; 
+}
+
+.active-link{
+    font-weight: bold;
+    color: #0000ca;
+    cursor:pointer;
+    text-decoration:none; 
+    border-bottom:3px solid #0000ca;
+}

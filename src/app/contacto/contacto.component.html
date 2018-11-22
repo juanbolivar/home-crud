@@ -1,0 +1,38 @@
+<!--FORMULARIO-->
+<div class="container">
+
+  <div class="title-form " style="text-align:center">
+    <h1>Pedir cita</h1>
+  </div>
+
+  <form id="pedirCita">
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" [(ngModel)]="user.name" class="form-control" id="name" name="name" placeholder="Escriba su nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Apellidos</label>
+      <input type="text" [(ngModel)]="user.lastname" class="form-control" id="lastname" name="lastname" placeholder="Escriba su apellido">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" [(ngModel)]="user.email"  class="form-control" id="email" name="email" placeholder="Escriba su email">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Teléfono</label>
+      <input type="text" [(ngModel)]="user.movilephone" class="form-control" id="numberphone" name="numberphone" placeholder="Escriba su teléfono">
+    </div>
+
+    <div>
+      <button (click)="addOrEdit()" class="btn btn-primary">
+        Enviar
+      </button>
+    </div>
+
+  </form>
+
+</div>
