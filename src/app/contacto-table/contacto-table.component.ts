@@ -47,8 +47,11 @@ export class ContactoTableComponent implements OnInit {
   }
 
   delete(user:User){
-    this.userList = this.userList.filter(x => x.id != user.id);
-    this.selectedUser = new User();
+    if(confirm('Estás seguro de querer elimar este usuario?')){
+      this.userList = this.userList.filter(x => x.id != user.id);
+      this.selectedUser = new User();
+    }
+   
   }
 
 }
