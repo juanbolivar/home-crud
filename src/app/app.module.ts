@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'contacto', component: ContactoTableComponent },
   { path: '', component: BodyComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/', pathMatch: 'full' }
-];
+]; 
 
 
 
