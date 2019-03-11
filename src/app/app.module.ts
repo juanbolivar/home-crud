@@ -1,7 +1,8 @@
-import { RouterModule, Routes } from '@angular/router';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+//servicios
+import { UserService } from './services/user.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,16 +11,14 @@ import { BodyComponent } from './body/body.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { TableComponent } from './table/table.component';
 import { ContactoTableComponent } from './contacto-table/contacto-table.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule } from '@angular/forms';
 
-const routes: Routes = [
-  { path: 'body', component: BodyComponent },
-  { path: 'contacto', component: ContactoTableComponent },
-  { path: '', component: BodyComponent, pathMatch: 'full' },
-  { path: '**', redirectTo: '/', pathMatch: 'full' }
-]; 
-
-
+import{ AppRoutingModule } from './app-routing.module';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
+ 
 
 @NgModule({
   declarations: [
@@ -29,14 +28,19 @@ const routes: Routes = [
     BodyComponent,
     ContactoComponent,
     TableComponent,
-    ContactoTableComponent
+    ContactoTableComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
-    FormsModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,42 @@
+<div class="col">
+  <h2 id="usuarios">Usuarios</h2>
+  <button class="btn btn-primary" (click)="addUser()">Agregar Usuario</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td class="hidden">{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.movilephone}}</td>
+        <td>
+          <button class="btn btn-success" (click)="editUser(user)">
+            Editar
+          </button>
+          <button class="btn btn-danger" (click)="deleteUser(user)">
+            Borrar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- 
 <div class="mt-5">
   <app-contacto (addOrEditEvent)="addOrEdit($event)" (deleteEvent)="delete($event)" [selectedUser]="selectedUser"></app-contacto>
 </div>
 <div class="mt-5">
   <app-table [userList]="userList" (openForEditEvent)="openForEdit($event)"></app-table>
-</div>
-
+</div> -->

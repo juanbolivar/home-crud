@@ -2,40 +2,44 @@
 <div class="container-fluid">
   <!--CABECERA-->
   <div class="row header">
-    
+
     <nav class="navbar w-100 navbar-expand-lg navbar-light col-sm-12">
-        
-        <!--LOGOTIPO-->
-        <div class="logo">
-              <img src="assets/logo.png" alt="LOGO">
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+
+      <!--LOGOTIPO-->
+      <div class="logo">
+        <img src="assets/logo.png" alt="LOGO">
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
             <a routerLink="/" title="Inicio">Inicio </a>
-            </li>
-            <li class="nav-item" routerLinkActive="active-link">
-            <a href="http://fisioterapiajesusbolivar.com/tratamientos"title="Tratamientos">Tratamientos</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active-link">
+          </li>
+          <li class="nav-item" routerLinkActive="active-link">
+            <a href="http://fisioterapiajesusbolivar.com/tratamientos" title="Tratamientos">Tratamientos</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active-link">
             <a href="http://fisioterapiajesusbolivar.com/centro" title="Centro">Centro</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active-link">
+          </li>
+          <li class="nav-item" routerLinkActive="active-link">
             <a href="http://fisioterapiajesusbolivar.com/personal" title="Personal">Personal</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active-link">
+          </li>
+          <li class="nav-item" routerLinkActive="active-link">
             <a href="http://fisioterapiajesusbolivar.com/grupos" title="Grupos">Grupos</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active-link">
+          </li>
+          <li class="nav-item" routerLinkActive="active-link">
             <a href="http://fisioterapiajesusbolivar.com/sesiones" title="Sesiones">Sesiones</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active-link">
+          </li>
+          <li class="nav-item" routerLinkActive="active-link">
             <a [routerLink]="['contacto']" title="Contacto">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+          </li>
+          <li class="nav-item" routerLinkActive="active-link">
+            <a [routerLink]="['contacto-table']" title="Contacto">Usuarios</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>

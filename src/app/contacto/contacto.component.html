@@ -1,5 +1,34 @@
+<div class="col">
+  <h2 class="text-center">Agregar Usuario</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input formControlName="name" placeholder="Nombre" name="name" class="form-control" id="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Apellido:</label>
+      <input formControlName="lastname" placeholder="Apellido" name="lastname" class="form-control" id="lastname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="movilephone">Teléfono:</label>
+      <input type="movilephone" formControlName="movilephone" placeholder="teléfono" name="movilephone" class="form-control" id="movilephone" required>
+    </div>
+
+    <button class="btn btn-success">Aceptar</button>
+    <button class="btn btn-primary" [routerLink]="['/']">Regresar</button>
+  </form>
+</div>
+
 <!--FORMULARIO-->
-<div class="container">
+<!-- <div class="container">
 
   <div class="title-form " style="text-align:center">
     <h1>Contacta</h1>
@@ -38,4 +67,4 @@
 
   </form>
 
-</div>
+</div> -->
